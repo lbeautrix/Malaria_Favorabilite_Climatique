@@ -26,7 +26,7 @@ co_wst = temp_min[c(1,2),]
 co_wst$ID[2] = 'LAT'
 co_wst = co_wst %>% column_to_rownames(var='ID')
 wst_co = as.data.frame(t(column_to_rownames(wst_co,'...1')))
-write.csv2(co_wst,'data/weather_station_coordinate.csv')
+write.csv2(co_wst,'data/input/weather_station_coordinate.csv')
 
 ## Altitude
 wst_alt = read.xlsx('GIS/output/wst_altitude.xls',1)
@@ -45,19 +45,15 @@ for (i in 1:nrow(temp_min)){
     temp_mean[i,j] = ((temp_max[i,j]+temp_min[i,j])/2)
 }
 
-write.csv2(x = temp_max,file = 'data/daily_max_temp.csv',row.names = FALSE)
-write.csv2(x = temp_min,file = 'data/daily_min_temp.csv',row.names = FALSE)
-write.csv2(x = temp_mean,file = 'data/daily_avg_temp.csv',row.names = FALSE)
+write.csv2(x = temp_max,file = 'data/input/daily_max_temp.csv',row.names = FALSE)
+write.csv2(x = temp_min,file = 'data/input/daily_min_temp.csv',row.names = FALSE)
+write.csv2(x = temp_mean,file = 'data/input/daily_avg_temp.csv',row.names = FALSE)
 
 ## Dataframe final
 #Température
-temp_min = read_csv2('data/daily_min_temp.csv')
+
 temp_min$DATE = as.Date(temp_min$DATE,format='%d-%m-%Y')
-
-temp_max = read_csv2('data/daily_max_temp.csv')
 temp_max$DATE = as.Date(temp_max$DATE,format='%d-%m-%Y')
-
-temp_mean = read_csv2('data/daily_avg_temp.csv')
 temp_mean$DATE = as.Date(temp_mean$DATE,format='%d-%m-%Y')
 
 day_temp_min = temp_min %>% pivot_longer(!DATE, names_to = "weather_station", values_to = "temp_min")
@@ -86,7 +82,7 @@ for(i in 1:nrow(day_temp)){
     day_temp$GDD[i] = 0}
 }
 
-write.csv2(day_temp,'data/daily_temperature.csv',row.names = FALSE)
+write.csv2(day_temp,'data/input/daily_temperature.csv',row.names = FALSE)
 
 ##Précipitations
 rain$ID = NULL
@@ -95,7 +91,7 @@ day_rain = rain %>% pivot_longer(!DATE, names_to = "weather_station", values_to 
   mutate(year = as.numeric(format(DATE, "%Y")),month = as.numeric(format(DATE,"%m")),day = as.numeric(format(DATE,"%d")),weather_station = as.factor(weather_station))
 day_rain = day_rain %>% filter(year >= 1983 & year <= 2016) #Garder uniquement les années communes avec day_temp
 
-write.csv2(day_rain,'data/daily_rain.csv',row.names = FALSE)
+write.csv2(day_rain,'data/input/daily_rain.csv',row.names = FALSE)
 
 
 
