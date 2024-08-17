@@ -38,7 +38,7 @@ day_temp$region[day_temp$weather_station == 'Kirehe'] = 'Kirehe'
 wst_co = read_csv2('data/input/weather_station_coordinate.csv')
 
 #Map
-rw_adm2 = st_read('data/rwanda_map_data/rwa_adm2_2006_NISR_WGS1984_20181002.shp')
+rw_adm2 = st_read('data/rwanda_map_data/rwa_adm2_2006_NISR_WGS1984_20181002.shp') #Shapefile disponible ici : https://data.humdata.org/dataset/cod-ab-rwa?
 ggplot(data = rw_adm2) + geom_sf() +
   geom_point(data = wst_co,aes(x=LON,y=LAT),size = 2, shape = 23, fill ='red') +
   xlab('Longitude') + ylab('Latitude') + theme_bw()
