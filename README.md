@@ -5,8 +5,7 @@ Données et codes R pour le mémoire intitulé "Modélisation de la favorabilit�
 Louis Beautrix
 
 # Avant-propos
-Ce code est directement issu du travail réalisé par Oswaldo C. Villena, Sadie J. Ryan, Courtney C. Murdock et Leah R. Johnsondans le cadre de leur recherche sur l'impact de
-la température sur la favorabilité environnementale du paludisme la transmission de Plasmodium falciparum et Plasmodium vivax par Anopheles gambiae et Anopheles stephensi. 
+Ce code est directement issu du travail réalisé par Oswaldo C. Villena, Sadie J. Ryan, Courtney C. Murdock et Leah R. Johnson dans le cadre de leur recherche sur l'impact de la température sur la favorabilité environnementale du paludisme la transmission de Plasmodium falciparum et Plasmodium vivax par Anopheles gambiae et Anopheles stephensi. 
 Cet article s'intitule : "Temperature impacts the environmental suitability for malaria transmission by Anopheles gambiae and Anopheles stephensi". 
 L'article peut être lu à l'adresse suivante : https://doi.org/10.1002/ecy.3685
 
