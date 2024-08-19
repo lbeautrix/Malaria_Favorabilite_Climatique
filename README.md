@@ -12,9 +12,9 @@ L'article peut être lu à l'adresse suivante : https://doi.org/10.1002/ecy.3685
 # Description des données
 Le fichier data.zip consiste en l'ensemble des données brutes nécessaires pour faire tourner le code "Data_Preparation.R" et "Suitability_Rwanda.R".
 Il contient 3 dossiers :
-Le premier, "incidence_data" correspond aux données d'incidence annuelle du paludisme au Rwanda produite par l'OMS.
-Le deuxième, "raw_data" correspond aux données météorologiques pour les 28 stations au Rwanda produite par la Rwanda Meteorology Agency.
-Le troisième, "villena_data" correspond aux 100 000 échantillons associés aux différents traits pour la transmission du Plasmodium falciparum par Anopheles gambiae (Villena et al., 2022).
+- Le premier, "incidence_data" correspond aux données d'incidence annuelle du paludisme au Rwanda produite par l'OMS.
+- Le deuxième, "raw_data" correspond aux données météorologiques pour les 28 stations au Rwanda produite par la Rwanda Meteorology Agency.
+- Le troisième, "villena_data" correspond aux 100 000 échantillons associés aux différents traits pour la transmission du Plasmodium falciparum par Anopheles gambiae (Villena et al., 2022).
 
 # Description des codes
 Le premier, "Data_Preparation.R" permet de modifier et corriger les données brutes contenues dans le dossier "raw_data".
