@@ -2,7 +2,7 @@
 Données et codes R pour le mémoire intitulé "Modélisation de la favorabilité climatique de la transmission du paludisme au Rwanda".
 
 # Auteur : 
-Louis Beautrix
+Louis Beautrix (louis.beautrix@gmail.com)
 
 # Avant-propos
 Ce code est directement issu du travail réalisé par Oswaldo C. Villena, Sadie J. Ryan, Courtney C. Murdock et Leah R. Johnson dans le cadre de leur recherche sur l'impact de la température sur la favorabilité environnementale du paludisme la transmission de Plasmodium falciparum et Plasmodium vivax par Anopheles gambiae et Anopheles stephensi. 
